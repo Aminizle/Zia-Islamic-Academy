@@ -121,3 +121,23 @@
 				});
 
 })(jQuery);
+
+let date = new Date();
+
+fetch(` http://api.aladhan.com/v1/timingsByCity?city=New York&country=United States of America&method=15`)
+	.then( res => res.json())
+	.then( data => {
+		console.log(data)
+		console.log(date)
+
+	})
+
+	.catch(err => {
+	console.log(`error ${err}`)
+	
+});
+
+
+
+
+
